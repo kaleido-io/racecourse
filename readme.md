@@ -8,7 +8,7 @@ Horse racing game implemented as a decentralized application.
 
 The front end is built using [React](https://reactjs.org) and [Redux](https://redux.js.org). The back-end is built on [NodeJS](https://nodejs.org/). Communication between the front-end and the back-end is carried out using [Socket.io](https://socket.io/). The game itself is implemented as a smart contract written in [Solidity](http://solidity.readthedocs.io).
 
-<a href="https://glitch.com/edit/#!/remix/gabriel-indik-racecourse">
+<a href="https://glitch.com/edit/#!/remix/kaleido-io-racecourse">
     <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix button" aria-label="remix" height="33">
 </a>
 
