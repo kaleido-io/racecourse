@@ -1,0 +1,95 @@
+.race-results-container {
+    padding-bottom: 50px;
+    text-align: center;
+    animation: slide-fade .6s ease-out;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #152934;
+}
+
+.winner-horse-image {
+    text-align: center;
+    height: 160px;
+}
+
+.winner-horse-name {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a6872;
+}
+
+.results-table {
+    box-shadow: 5px 10px 18px #888888;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.results-table th {
+    padding: 20px;
+    border: 3px solid lightgrey;
+    background: linear-gradient(green, darkgreen);
+    color: white;
+}
+
+.results-table td {
+    padding: 20px;
+    border: 3px solid lightgrey;
+    background-color: white;
+    text-align: center;
+}
+
+.jackpot-value {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a6872;
+}
+
+.results-message {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a6872;
+}
+
+.place-new-bet-message {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+    color: #5a6872;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+
+.fade-leave-active {
+    opacity: 0;
+    transition: opacity 2s;
+}

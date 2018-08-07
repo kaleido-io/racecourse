@@ -1,0 +1,14 @@
+.sound-control-container {
+    width: 26px;
+    height: 26px;
+}
+
+.sound-control-icon {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sounds-checkbox {
+    display: none;
+}

@@ -1,0 +1,82 @@
+.place-bet-container {
+    text-align: center;
+}
+
+.place-bet-form {
+    display: inline-block;
+    border: solid 3px lightgrey;
+    padding: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    background-color: white;
+}
+
+.place-bet-form .form-label {
+    margin-right: 10px;
+}
+
+.horse-to-bet {
+    font-size: 16px;
+    margin-right: 20px;
+    height: 40px;
+    width: 140px;
+    border: solid 3px lightgray;
+    background-color: white;
+}
+
+.horse-radios-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.horse-radio-container {
+    height: 120px;
+    width: 110px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.horse-radio-image {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 5px;
+}
+
+.horse-radio-input {
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bet-amount-input {
+    font-size: 16px;
+    height: 34px;
+    width: 80px;
+    text-align: right;
+    border: solid 3px lightgray;
+    margin-right: 20px;
+}
+
+.place-bet-button {
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    background: linear-gradient(rgb(100, 100, 100), black);
+    box-shadow: 3px 3px #888888;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: opacity .25s;
+}
+
+.place-bet-button.disabled {
+    opacity: .4;
+    pointer-events: none;
+}

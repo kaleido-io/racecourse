@@ -1,0 +1,35 @@
+.ready-to-race-prompt-container {
+    display: inline-block;
+    border: solid 3px lightgrey;
+    padding: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    background-color: white;
+}
+
+.ready-to-race-controls {
+    display: flex;
+    align-items: center;
+}
+
+.ready-to-race-message {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.ready-to-race-button {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    background: linear-gradient(rgb(100, 100, 100), black);
+    box-shadow: 3px 3px #888888;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: opacity .25s;
+}
+
+.ready-to-race-button.disabled {
+    opacity: .4;
+    pointer-events: none;
+}

@@ -1,0 +1,65 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    position: fixed;
+    width: 100vw;
+    background: linear-gradient(black, #152934);
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1000;
+    overflow-x: auto;
+}
+
+.app-main-title {
+    padding-left: 20px;
+    font-size: 32px;
+}
+
+.right-aligned-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.account {
+    margin-left: 20px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.logout-button {
+    font-size: 16px;
+    margin-right: 20px;
+    color: white;
+    border: none;
+    height: 40px;
+    min-width: 100px;
+    background: linear-gradient(rgb(224, 0, 0), rgb(134, 0, 0));
+    cursor: pointer;
+    box-shadow: 3px 3px #383838;
+}
+
+.main-screen-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.loading {
+    position: absolute;
+    top: calc(50% - 64px);
+    left: calc(50% - 64px);
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "kbp",
+  "version": "1.0.0",
+  "description": "Kaleido Blockhain Project>",
+  "scripts": {
+    "start": "cd client; npm install; npm run build; cd ..; cd server; npm install; node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbp7958/kbp.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Indik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbp7958/kbp/issues"
+  },
+  "homepage": "https://github.com/kbp7958/kbp#readme"
+}

@@ -1,0 +1,117 @@
+.race-animation-container {
+    width: 100%;
+    animation: fade 2s;
+}
+
+.track {
+    height: 600px;
+    min-width: 600px;
+    flex-grow: 1;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.horses-container {
+    margin-right: 300px;
+    position: relative;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.horse {
+    position: absolute;
+    left: 0;
+    height: 200px;
+}
+
+.horse-racing {
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.horse-1 {
+    top: 0;
+}
+
+.horse-2 {
+    top: 100px;
+    animation-delay: .2s   
+}
+.horse-3 {
+    top: 200px;
+    animation-delay: .1s
+}
+.horse-4 {
+    top: 300px;
+    animation-delay: .3s
+}
+.horse-5 {
+    top: 400px;
+    animation-delay: .4s
+}
+
+.lane-container {
+    box-shadow: 5px 10px 18px #888888;
+    width: 100%;
+    height: 495px;
+    position: absolute;
+    top: 110px;
+}
+
+.lane {
+    position: absolute;
+    height: 95px;
+    width: 100%;
+    background: linear-gradient(green, darkgreen);
+    font-size: 32px;
+    color: white;
+    line-height: 95px;
+}
+
+.lane-1 {
+    top: 0px;
+}
+
+.lane-2 {
+    top: 100px;
+}
+
+.lane-3 {
+    top: 200px;
+}
+
+.lane-4 {
+    top: 300px;
+}
+
+.lane-5 {
+    top: 400px;
+}
+
+.winner-lane {
+    animation-name: laneColor;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes laneColor {
+    0%, 100% {
+        color: yellow;
+
+    }
+    50% {
+
+      color: darkgreen;
+    }
+}
