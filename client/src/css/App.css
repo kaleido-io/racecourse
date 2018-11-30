@@ -63,3 +63,17 @@
     left: calc(50% - 64px);
     text-align: center;
 }
+
+.right-aligned-container .contract-address-label {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.right-aligned-container .contract-value {
+    margin-left: 8px;
+    font-size: 16px;
+    width: 400px;
+    border-radius: 4px;
+    text-align: center;
+    border: solid 1px grey;
+}

@@ -38,7 +38,7 @@ io.on('connection', (socket) => {
     socket.on('action', ({ type, payload }) => {
         switch (type) {
             case 'LOGIN':
-                handleLogin(socket, payload.url, payload.user, payload.password, eventListener);
+                handleLogin(socket, payload.url, payload.user, payload.password, payload.contractAddress, eventListener);
                 break;
             case 'LOGOUT':
                 handleLogout(socket);
@@ -55,7 +55,7 @@ io.on('connection', (socket) => {
 });
 
 
-let handleLogin = (socket, url, user, password, eventListener) => {
+let handleLogin = (socket, url, user, password, contractAddress, eventListener) => {
 
     index1 = url.indexOf(':', 8);
     index2 = url.indexOf('@', 8);
@@ -69,14 +69,15 @@ let handleLogin = (socket, url, user, password, eventListener) => {
     console.log('Attempting to connect to ' + url + ' with user "' + (user || '') + '" (client ' + socket.handshake.session.id + ')');
 
     let racecourse = new Racecourse();
-    racecourse.init(url, user, password, eventListener, contractAddresses[url], (status) => {console.log(status)}).then(() => {
+    racecourse.init(url, user, password, eventListener, contractAddress || contractAddresses[url], (status) => {console.log(status)}).then(() => {
         contractAddresses[url] = racecourse.contractInstance.address;
         racecourses[socket.handshake.session.id] = racecourse;
         socket.handshake.session.data = {
             loginFailed: false,
             accounts: racecourse.accounts,
             url: url,
-            user: user
+            user: user,
+            contractAddress: racecourse.contractInstance.address
         };
         socket.handshake.session.save();
         dispatchContratStateUpdate(socket, 'Initialization');

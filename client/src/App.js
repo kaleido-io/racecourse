@@ -26,6 +26,8 @@ class App extends Component {
                         <div className="top-bar">
                             <div className="app-main-title">Racecourse</div>
                             <div className="right-aligned-container">
+                            <div className="contract-address-label">Contract address:</div>
+                            <input type="text" className="contract-value" readOnly value={this.props.sessionData.contractAddress} />
                                 <div className="account">Your account:</div>
                                 <AccountSelector />
                                 <button className="logout-button" onClick={this.logout}>Log out</button>
