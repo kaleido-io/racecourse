@@ -14,8 +14,6 @@ const Racecourse = require('./Racecourse');
 
 const racecourses = {};
 
-const contractAddresses = {};
-
 app.use(session);
 
 io.use(sharedsession(session));
@@ -69,8 +67,7 @@ let handleLogin = (socket, url, user, password, contractAddress, eventListener) 
     console.log('Attempting to connect to ' + url + ' with user "' + (user || '') + '" (client ' + socket.handshake.session.id + ')');
 
     let racecourse = new Racecourse();
-    racecourse.init(url, user, password, eventListener, contractAddress || contractAddresses[url], (status) => {console.log(status)}).then(() => {
-        contractAddresses[url] = racecourse.contractInstance.address;
+    racecourse.init(url, user, password, eventListener, contractAddress, (status) => {console.log(status)}).then(() => {
         racecourses[socket.handshake.session.id] = racecourse;
         socket.handshake.session.data = {
             loginFailed: false,
