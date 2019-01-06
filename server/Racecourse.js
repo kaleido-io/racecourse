@@ -33,7 +33,7 @@ class Racecourse {
                     });
                 } else {
                     statusFunction('Deploying contract...');
-                    this.raceContract = raceContract.new({from: web3.eth.accounts[0], gasPrice: 0, gas: 500000000}).then((instance) => {
+                    this.raceContract = raceContract.new({from: web3.eth.accounts[0], gasPrice: 0, gas: 5000000}).then((instance) => {
                         statusFunction('Contract successfully deployed')
                         this.contractInstance = instance;
                         web3.eth.getBlockNumber((err, blockNumber) => {
@@ -48,7 +48,7 @@ class Racecourse {
                     
                     // Send a transaction to force the block to be mined with the contract
                     setTimeout(() => {
-                        web3.eth.sendTransaction({from: web3.eth.accounts[0], gasPrice: 0, gas: 500000000});
+                        web3.eth.sendTransaction({from: web3.eth.accounts[0], gasPrice: 0, gas: 5000000});
                     }, 1000);
                 }
     
@@ -144,11 +144,11 @@ class Racecourse {
     };
 
     placeBet(index, amount, account) {
-        return this.contractInstance.placeBet(index, amount, {from: account, gas: 45000000});
+        return this.contractInstance.placeBet(index, amount, {from: account, gas: 5000000});
     }
     
     playerReadyToRace(account) {
-        return this.contractInstance.playerReadyToRace({from: account, gas: 45000000});
+        return this.contractInstance.playerReadyToRace({from: account, gas: 5000000});
     }
 
 }
