@@ -47,7 +47,7 @@ class Connection extends Component {
         return (
         <div className="connection-container">
             <form className="connection-form" onSubmit={this.handleSubmit}>
-                <div className="app-title">Racecource</div>
+                <div className="app-title">Racecourse</div>
                 <img className="splash-image" src={splashImage} alt="Racecourse"/>
 
                 {this.props.sessionData.loginFailed &&
