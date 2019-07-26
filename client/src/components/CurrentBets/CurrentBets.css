@@ -1,4 +1,5 @@
 .current-bets-container {
+    background: rgba(255, 255, 255, .9);
     padding-bottom: 50px;
     text-align: center;
     animation: slide-fade .6s ease-out;

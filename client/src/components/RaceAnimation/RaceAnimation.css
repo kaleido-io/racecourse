@@ -19,14 +19,32 @@
     position: relative;
 }
 
+@keyframes race {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
 @keyframes bounce {
-    0%, 100% {
+    0% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
+    100% {
+        transform: translateY(0);
+    }
 }
+
+.speed-1 { animation: race 5s linear; }
+.speed-2 { animation: race 4.7s linear; }
+.speed-3 { animation: race 4.2s linear; }
+.speed-4 { animation: race 4.1s linear; }
+.speed-5 { animation: race 3.9s linear; }
 
 .horse {
     position: absolute;
@@ -34,29 +52,31 @@
     height: 200px;
 }
 
-.horse-racing {
-    animation-name: bounce;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+.horse-running {
+    animation: bounce 1s infinite linear;
 }
 
-.horse-1 {
+.horse-finished {
+    left: 100%;
+}
+
+.horse-0 {
     top: 0;
 }
 
-.horse-2 {
+.horse-1 {
     top: 100px;
     animation-delay: .2s   
 }
-.horse-3 {
+.horse-2 {
     top: 200px;
     animation-delay: .1s
 }
-.horse-4 {
+.horse-3 {
     top: 300px;
     animation-delay: .3s
 }
-.horse-5 {
+.horse-4 {
     top: 400px;
     animation-delay: .4s
 }
@@ -79,23 +99,23 @@
     line-height: 95px;
 }
 
-.lane-1 {
+.lane-0 {
     top: 0px;
 }
 
-.lane-2 {
+.lane-1 {
     top: 100px;
 }
 
-.lane-3 {
+.lane-2 {
     top: 200px;
 }
 
-.lane-4 {
+.lane-3 {
     top: 300px;
 }
 
-.lane-5 {
+.lane-4 {
     top: 400px;
 }
 

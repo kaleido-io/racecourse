@@ -1,0 +1,117 @@
+.bg__sky {
+    height: 100vh;
+    width: 100vw;
+    background: lightblue;
+  }
+  
+  .bg__backTrack {
+    height: 5vh;
+    position: fixed;
+    bottom: 70vh;
+    background: brown;
+    width: 100vw;
+    border-bottom: 5px solid white;
+  }
+  
+  .bg__backFence {
+    height: 20px;
+    position: fixed;
+    bottom: 75vh;
+    width: 100vw;
+    background: white;
+    border-top: 5px solid grey;
+  }
+  
+  .bg__infield {
+    width: 100vw;
+    height: 70vh;
+    bottom: 0;
+    background: green;
+    position: absolute;
+  }
+  
+  .bg__track {
+    position: absolute;
+    bottom: 0;
+    height: 50vh;
+    background: brown;
+    border-top: 30px solid white;
+    width: 100%;
+  }
+  
+  .bg__cloud {
+    background: white;
+    border-radius: 9999rem;
+    height: 30px;
+    width: 90px;
+    position: absolute;
+    top: 30px;
+    left: 10vw;
+    opacity: .3;
+    
+    &:before {
+      content: '';
+      height: 30px;
+      width: 180px;
+      background: white;
+      display: block;
+      position: relative;
+      left: -30px;
+      border-radius: 9999rem;
+      bottom: -20px;
+    }
+    
+    &:nth-child(2n) {
+      left: 40vw;
+      top: 90px;
+      
+      &:before {
+        left: -40px;
+      }
+    }
+    
+    &:nth-child(3n) {
+      right: 20vw;
+      left: auto;
+      top: 60px;
+      
+      &:before {
+        left: -60px;
+      }
+    }
+  }
+  
+  .bg__container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .bg__finish-line {
+    width: 80px;
+    background: white;
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    display: block;
+    opacity: .2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(25deg);
+    
+    
+    &:before {
+      content: "Finish";
+      transform: rotate(90deg);
+      display: block;
+      color: black;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+    }
+  }

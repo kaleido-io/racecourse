@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    position: relative;
 }
 
 .top-bar {
@@ -55,6 +56,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
+    position: relative;
 }
 
 .loading {
