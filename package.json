@@ -1,19 +1,22 @@
 {
-  "name": "kbp",
-  "version": "1.0.0",
-  "description": "Kaleido Blockhain Project>",
+  "name": "racecourse",
+  "version": "2.0.0",
+  "description": "A decentralized horse-race powered by ethereum blockchains.",
   "scripts": {
     "start": "cd client; npm install; npm run build; cd ..; cd server; npm install; node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kbp7958/kbp.git"
+    "url": "git+https://github.com/kaleido-io/racecourse.git"
   },
   "keywords": [],
-  "author": "Gabriel Indik",
+  "author": "Gabriel Indik & Josh Mobley",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kbp7958/kbp/issues"
+    "url": "https://github.com/kaleido-io/racecourse"
   },
-  "homepage": "https://github.com/kbp7958/kbp#readme"
+  "homepage": "https://github.com/kaleido-io/racecourse#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

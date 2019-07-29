@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './PlaceBet.css';
 import betSound from '../../sounds/bet.mp3';
 import PropTypes from 'prop-types';
+import { Dropdown } from 'react-dropdown';
 
 const PlaceBet = ({ account, contractState, dispatch, sounds }) => {
 
@@ -33,23 +34,22 @@ const PlaceBet = ({ account, contractState, dispatch, sounds }) => {
         updateBetWasPlaced(true);
     }
 
+    const generateOptions = (horses) => {
+        let optionArr = [];
+        horses.map((horse, index) => optionArr.push({
+            value: horse.name,
+            label: <div>{ horse.name }</div>
+        });
+
+        return optionArr;
+    }
+
     return (
         <div className="place-bet-container">
-            <form className="place-bet-form" onSubmit={handleSubmit}>
-                <div className="horse-radios-container">
-                        <select>
-                    {contractState.horses.map((horse) => (
-                            <option key={horse.index}>
-                                <img src={require('../../img/horse-' + (Number(horse.index) + 1) + '.png')} className="horse-radio-image" alt="horse" />
-                                {horse.name}
-                            </option>
-                    ))}
-                    </select>
-                </div>
+            <Dropdown options={contractState.horses} onChange={handleSelectedHorseChange} placeholder="Select a horse" />
                 <label className="form-label">Amount:</label>
                 <input type="number" className="bet-amount-input" value={betAmount} onChange={handleBetAmountChange} />
-                <button type="submit" className={'place-bet-button ' + (betWasPlaced || !selectedHorse ? 'disabled' : '')}>Place bet</button>
-            </form>
+                <button type="submit" className={'place-bet-button ' + (betWasPlaced || !selectedHorse ? 'disabled' : '')} onClick={handleSubmit}>Place bet</button>
         </div>
     );
 };

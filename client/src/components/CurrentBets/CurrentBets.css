@@ -1,8 +1,10 @@
 .current-bets-container {
-    background: rgba(255, 255, 255, .9);
-    padding-bottom: 50px;
-    text-align: center;
     animation: slide-fade .6s ease-out;
+    background: rgba(255, 255, 255, .9);
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    width: 800px;
 }
 
 .title {
